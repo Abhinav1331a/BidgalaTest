@@ -1,0 +1,16 @@
+body{
+  margin: 10px;
+  background-color: whitesmoke;
+}
+
+.form-group {
+   padding-top: 60px;
+}
+
+.search {
+    background: url(search.png) no-repeat center right 20px #fff;
+}
+
+.poster{
+  margin-right: 10px;
+}
