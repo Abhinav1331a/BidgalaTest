@@ -45,7 +45,7 @@ function watchlist(obj){
   var remove_btn = `<button class="btn btn-dark btn-block" float="right" id="wlbtn" onclick="removewatchlist(this)">Remove</button><br>`
   var div = $(obj).closest(".resultcont").clone()
   $(div).children("#wlbtn").prop('hidden', true)
-  watchlistarr.unshift(div.append(remove_btn))
+  watchlistarr.push(div.append(remove_btn))
   $("#watchlistdiv").html(watchlistarr)
 
 }
