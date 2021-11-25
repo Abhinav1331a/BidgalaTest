@@ -19,7 +19,7 @@ function handle(e){
     method: "GET",
     url: url+"&t="+search_value,
     success: function(data){
-    result.push(`<div class="container resultcont">
+    result.unshift(`<div class="container resultcont">
               <img src="${data.Poster}" class="img-thumbnail poster float-left" width="150px" height="150px"/>
               <p>Title: ${data.Title}</p>
               <p> Genre: ${data.Genre}</p>
@@ -45,7 +45,7 @@ function watchlist(obj){
   var remove_btn = `<button class="btn btn-dark btn-block" float="right" id="wlbtn" onclick="removewatchlist(this)">Remove</button><br>`
   var div = $(obj).closest(".resultcont").clone()
   $(div).children("#wlbtn").prop('hidden', true)
-  watchlistarr.push(div.append(remove_btn))
+  watchlistarr.unshift(div.append(remove_btn))
   $("#watchlistdiv").html(watchlistarr)
 
 }
